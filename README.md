@@ -1,5 +1,15 @@
 # lemon-typescript-template
 
+# Done
+- eslint
+- prettier
+- editorconfig
+- gitignore
+- nvmrc
+- testing(jest)
+- tsconfig
+- husky & lint-staged
+
 # Prerequisite
 
 ### serverless
