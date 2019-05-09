@@ -4,7 +4,7 @@ const router: Router = Router();
 
 router.get('/hello', (_: Request, res: Response) => {
     res.json({
-        result: "Hello World!",
+        result: 'Hello World!!!',
     });
 });
 
