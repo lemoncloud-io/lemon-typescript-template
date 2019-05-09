@@ -57,6 +57,14 @@ $ npm install --save-dev typescript ts-jest serverless nodemon jest husky concur
 $ npm install --save-dev @types/cors @types/dotenv @types/jest @types/morgan @types/winston
 ```
 
+## eslint, prettier
+
+```bash
+$ npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+$ npm install prettier eslint-config-prettier --save-dev
+$ npm install @types/supertest --save-dev
+```
+
 # VSCode plugins
 - [Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [tslint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint): deprecated

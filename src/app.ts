@@ -20,10 +20,13 @@ app.use(controllers);
 if (process.env.NODE_ENV === 'development') {
     const PORT = process.env.PORT || 8080;
     const HOST = process.env.HOST || 'http://127.0.0.1';
-    app.listen(PORT, () => {
-        console.log(`[${process.env.NODE_ENV.toUpperCase()} ENV]`);
-        console.log(`Running on port ${HOST}:${PORT}`);
-    });
+    app.listen(
+        PORT,
+        (): void => {
+            console.log(`[${process.env.NODE_ENV.toUpperCase()} ENV]`);
+            console.log(`Running on port ${HOST}:${PORT}`);
+        },
+    );
 }
 
-export = app;
+export default app;
