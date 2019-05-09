@@ -23,8 +23,8 @@
         }
     },
     "lint-staged": {
-        "*.js": [
-            "eslint '*/**/*.{js,ts,tsx}' --fix",
+        "src/**/*.{js,ts}": [
+            "eslint --fix",
             "git add"
         ]
     },
