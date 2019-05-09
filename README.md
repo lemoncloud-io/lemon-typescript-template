@@ -45,6 +45,7 @@ $ npm run test
 # TODO
 - [ ] tslint to eslint
 - [ ] prettier 
+- [ ] serverless
 
 # Setup
 
