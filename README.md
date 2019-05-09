@@ -6,6 +6,8 @@
 
 ```bash
 $ npm install -g serverless
+$ npm install -g nodemone
+$ npm install -g eslint
 ```
 
 ## nvm
@@ -33,13 +35,13 @@ $ npm run build
 ## Development
 
 ```bash
-$ npm run start
+$ npm start
 ```
 
 ## Test
 
 ```bash
-$ npm run test
+$ npm test
 ```
 
 # TODO
@@ -78,9 +80,6 @@ $ npm install @types/supertest --save-dev
 ```
     ...
 
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -95,8 +94,23 @@ $ npm install @types/supertest --save-dev
     ],
     "prettier.eslintIntegration": true,
     "javascript.format.enable": false,
-    "editor.formatOnSave": true,
     "eslint.autoFixOnSave": true,
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
     ...
 ```
