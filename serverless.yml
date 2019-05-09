@@ -1,0 +1,11 @@
+service: lemon-typescript-template
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs8.10
+functions:
+  api:
+    handler: dist/handler.handler
+    events:
+      - http: ANY /
+      - http: "ANY {proxy+}"
