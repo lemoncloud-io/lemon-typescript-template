@@ -1,5 +1,5 @@
 import app from '../src/app';
-import * as request from 'supertest';
+import request from 'supertest';
 
 describe('App', (): void => {
     it('should test the app', (): void => {
@@ -19,12 +19,14 @@ describe('Test the route path', (): void => {
             );
     });
 
-    it('It should response 404', done => {
+    it('It should response 404', (done): void => {
         request(app)
             .get('/should_return_error')
-            .then((res: any) => {
-                expect(res.statusCode).toBe(404);
-                done();
-            });
+            .then(
+                (res: any): void => {
+                    expect(res.statusCode).toBe(404);
+                    done();
+                },
+            );
     });
 });
