@@ -66,5 +66,37 @@ $ npm install @types/supertest --save-dev
 ```
 
 # VSCode plugins
+
 - [Editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-- [tslint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint): deprecated
+- [eslint](https://github.com/Microsoft/vscode-eslint)
+- [prettier](https://github.com/prettier/prettier-vscode)
+
+## How to setup VSCode
+
+- eslint, prettier 설치
+- vscode의 ```settings.json``` 오픈 후 아래 코드 추가
+```
+    ...
+
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        }
+    ],
+    "prettier.eslintIntegration": true,
+    "javascript.format.enable": false,
+    "editor.formatOnSave": true,
+    "eslint.autoFixOnSave": true,
+
+    ...
+```
