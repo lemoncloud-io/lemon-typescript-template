@@ -4,13 +4,13 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "nodemon-start": "NODE_ENV=development nodemon dist/app.js",
-        "dev": "npm run build && npm run start",
-        "start": "npm run build && concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run nodemon-start\"",
+        "nodemon": "NODE_ENV=development nodemon dist/app.js",
+        "start": "npm run build && concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run nodemon\"",
         "build": "npm run build-ts",
         "build-ts": "tsc",
         "watch-ts": "tsc -w",
-        "test": "jest --config=jest.config.json --watchAll",
+        "dev:test": "jest --config=jest.config.json --watchAll",
+        "test": "jest --config=jest.config.json",
         "lint": "tsc --noEmit && eslint '*/**/*.{js,ts}' --fix"
     },
     "repository": {
@@ -28,6 +28,9 @@
             "git add"
         ]
     },
+    "engines": {
+        "node": ">=8.10.0"
+    },
     "author": "Louis",
     "license": "MIT",
     "bugs": {
@@ -41,7 +44,8 @@
         "express": "^4.16.4",
         "morgan": "^1.9.1",
         "supertest": "^4.0.2",
-        "winston": "^3.2.1"
+        "winston": "^3.2.1",
+        "typescript": "^3.4.5"
     },
     "devDependencies": {
         "@types/cors": "^2.8.5",
@@ -61,7 +65,6 @@
         "lint-staged": "^8.1.6",
         "nodemon": "^1.19.0",
         "prettier": "^1.17.0",
-        "ts-jest": "^24.0.2",
-        "typescript": "^3.4.5"
+        "ts-jest": "^24.0.2"
     }
 }

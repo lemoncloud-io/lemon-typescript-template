@@ -14,7 +14,7 @@
 
 ### serverless
 
-```bash
+```sh
 $ npm install -g serverless
 $ npm install -g nodemone
 $ npm install -g eslint
@@ -22,7 +22,7 @@ $ npm install -g eslint
 
 ### nvm
 
-```bash
+```sh
 $ nvm use
 Found '/Users/tak/workspace/lemoncloud/api/lemon-typescript-template/.nvmrc' with version <8.10.0>
 Now using node v8.10.0 (npm v5.6.0)
@@ -34,31 +34,32 @@ Now using node v8.10.0 (npm v5.6.0)
 
 ### Instalation
 
-```bash
+```sh
 $ npm install
 ```
 
 ### Build for typescript
 
-```bash
+```sh
 $ npm run build
 ```
 
 ### Development
 
-```bash
+```sh
 $ npm start
 ```
 
 ### Test
 
-```bash
+```sh
 $ npm test
+$ npm run dev:test # 개발할 때 사용, --watchAll 추가됨
 ```
 
 ### Lint
 
-```bash
+```sh
 $ npm run lint
 ```
 
@@ -71,7 +72,7 @@ $ npm run lint
 
 # Setup
 
-```bash
+```sh
 $ nvm use
 $ npm init 
 $ npm install --save body-parser cors dotenv express morgan serverless-http winston
@@ -94,7 +95,7 @@ $ npm install @types/supertest --save-dev
 
 - eslint, prettier plugin 설치
 - vscode의 ```settings.json``` 오픈 후 아래 코드 추가
-```
+```json
     ...
 
     "eslint.validate": [
