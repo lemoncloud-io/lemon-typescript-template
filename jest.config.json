@@ -6,10 +6,10 @@
             "tsConfigFile": "tsconfig.json"
         }
     },
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
     "testEnvironment": "node",
-    "testMatch": ["**/tests/**/*.+(ts|tsx|js)"],
+    "testMatch": ["**/tests/**/*.+(ts|tsx|js|jsx)", "**/src/**/*.spec.+(ts|tsx|js|jsx)"],
     "transform": {
-        "^.+\\.(ts|tsx)$": "ts-jest"
+        "^.+\\.(ts|tsx|js|jsx)$": "ts-jest"
     }
 }
