@@ -11,7 +11,7 @@
         "watch-ts": "tsc -w",
         "dev:test": "jest --config=jest.config.json --watchAll",
         "test": "jest --config=jest.config.json",
-        "lint": "tsc --noEmit && eslint '*/**/*.{js,ts}' --fix"
+        "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,jsx,tsx}' --fix"
     },
     "repository": {
         "type": "git",
