@@ -1,4 +1,4 @@
-# lemon-typescript-template
+# lemon-typescript-template [![Build Status](https://travis-ci.com/louis-lemon/lemon-typescript-template.svg?branch=develop)](https://travis-ci.com/louis-lemon/lemon-typescript-template) [![codecov](https://codecov.io/gh/louis-lemon/lemon-typescript-template/branch/develop/graph/badge.svg)](https://codecov.io/gh/louis-lemon/lemon-typescript-template)
 
 # Done
 - eslint
@@ -9,6 +9,8 @@
 - testing(jest)
 - tsconfig
 - husky & lint-staged
+- travis-ci
+- codecov
 
 # Prerequisite
 
@@ -113,8 +115,6 @@ $ ./node_modules/.bin/codecov --token="....." # token은 codecov에서 확인가
 ---
 
 # TODO
-- [x] tslint to eslint
-- [x] prettier 
 - [ ] serverless
 
 # Setup
