@@ -81,6 +81,35 @@ $ npm run lint
 
 ![travis-badge](https://user-images.githubusercontent.com/46361622/57597832-eb4b5f00-758b-11e9-8313-39b3533ad91d.png)
 
+- 링크 복사 및 README.md에 추가
+
+> 2019.05.13: lemoncloud-io에서 travis-ci 권한 얻을 수 없어서 fork 뜬 후에 louis repo에서 진행
+
+---
+
+# Codecov [![codecov](https://codecov.io/gh/louis-lemon/lemon-typescript-template/branch/develop/graph/badge.svg)](https://codecov.io/gh/louis-lemon/lemon-typescript-template)
+
+- jest와 [codecov](https://codecov.io)를 이용하여 테스트코드의 코드 커버리지를 리포트할 수 있다.
+- travis-ci처럼 codecov에 github로 로그인하여 repository와 sync한다.
+
+## Install codecov
+
+```
+$ npm install --save-dev codecov
+```
+
+## Report coverage
+
+```bash
+$ npm run test
+# 위 명령어 실행 후, coverage 폴더가 생성된다.
+$ ./node_modules/.bin/codecov --token="....." # token은 codecov에서 확인가능하다.
+```
+
+## travis-ci와 연동
+
+- .travis.yml 파일에서 env 및 after_success 설정해준다.
+
 ---
 
 # TODO
