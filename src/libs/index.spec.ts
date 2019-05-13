@@ -2,9 +2,7 @@ import { sayHello, sum } from './index';
 
 describe('Test lib func', () => {
     it('It should say Hello test', () => {
-        const name = 'test';
-        const expected = `Hello ${name}`;
-        expect(sayHello(name)).toBe(expected);
+        expect(sayHello('test')).toBe('Hello test');
     });
 
     it('It should calculate sum', () => {
