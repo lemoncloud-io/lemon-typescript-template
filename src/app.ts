@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import controllers from './controllers';
+import { sayHello, sum } from './libs';
 
 // Load environment variables from .env file
 dotenv.config({ path: '.env' });
@@ -28,4 +29,5 @@ if (process.env.NODE_ENV === 'development') {
     });
 }
 
+export { sayHello, sum }; // export libs
 export default app;
