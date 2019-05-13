@@ -9,8 +9,8 @@
         "build": "npm run build-ts",
         "build-ts": "tsc",
         "watch-ts": "tsc -w",
-        "dev:test": "jest --config=jest.config.json --watchAll",
-        "test": "jest --config=jest.config.json",
+        "dev:test": "jest --config=jest.config.json --watchAll --coverage",
+        "test": "jest --config=jest.config.json --coverage",
         "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,jsx,tsx}' --fix"
     },
     "repository": {
