@@ -1,6 +1,6 @@
 import { sayHello, sum } from './index';
 
-describe('Test lib func', () => {
+describe('Test libs func', () => {
     it('It should say Hello test', () => {
         expect(sayHello('test')).toBe('Hello test');
     });
