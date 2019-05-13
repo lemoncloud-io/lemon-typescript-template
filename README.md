@@ -65,6 +65,24 @@ $ npm run lint
 
 ---
 
+# Travis-CI 설정 [![Build Status](https://travis-ci.com/louis-lemon/lemon-typescript-template.svg?branch=develop)](https://travis-ci.com/louis-lemon/lemon-typescript-template)
+
+- [travis-ci](https://travis-ci.com)에서 github로 sign-up 및 계정 access 허용
+- .travis.yml 파일 추가
+- push or pull request 날려보기
+- 아래 이미지처럼 나와야함
+
+![travis-build](https://user-images.githubusercontent.com/46361622/57597834-ebe3f580-758b-11e9-9903-baaff55a8362.png)
+
+
+## 뱃지다는 법
+- traivs-ci repository의 이름 옆에 있는 뱃지 클릭
+- 브랜치 및 URL 형식 설정(여기서는 Markdown)
+
+![travis-badge](https://user-images.githubusercontent.com/46361622/57597832-eb4b5f00-758b-11e9-8313-39b3533ad91d.png)
+
+---
+
 # TODO
 - [x] tslint to eslint
 - [x] prettier 
