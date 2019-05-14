@@ -4,7 +4,7 @@ import request from 'supertest';
 describe('Test the route path', () => {
     it('It should response the GET method', done => {
         request(app)
-            .get('/hello')
+            .get('/')
             .then((res: any) => {
                 expect(res.statusCode).toBe(200);
                 done();

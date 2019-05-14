@@ -29,3 +29,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export default app;
+
+// export libs
+import { sayHello, sum } from './libs';
+export { sayHello, sum };
