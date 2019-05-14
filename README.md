@@ -11,15 +11,15 @@
 - husky & lint-staged
 - travis-ci
 - codecov
+- typedoc
+- npm module(publish)
 
 # Prerequisite
 
-### serverless
+### nodemon
 
 ```sh
-$ npm install -g serverless
-$ npm install -g nodemone
-$ npm install -g eslint
+$ npm install -g nodemon
 ```
 
 ### nvm
@@ -34,7 +34,7 @@ Now using node v8.10.0 (npm v5.6.0)
 
 # How to use
 
-### Instalation
+### Installation
 
 ```sh
 $ npm install
@@ -56,13 +56,29 @@ $ npm start
 
 ```sh
 $ npm test
-$ npm run dev:test # 개발할 때 사용, --watchAll 추가됨
+$ npm run dev:test # 개발할 때 사용, --watchAll 추가
 ```
 
 ### Lint
 
 ```sh
 $ npm run lint
+```
+
+### Publish to npm(module)
+
+```sh
+$ npm login
+Username:
+
+$ npm publish
+```
+
+### Documentation
+
+```sh
+$ npm run doc
+$ npm run doc:publish # gh-pages 만들기
 ```
 
 ---
@@ -115,7 +131,7 @@ $ ./node_modules/.bin/codecov --token="....." # token은 codecov에서 확인가
 ---
 
 # TODO
-- [ ] serverless
+- [ ] Setup serverless
 
 # Setup
 
