@@ -2,11 +2,11 @@
     "compilerOptions": {
         "module": "commonjs",
         "esModuleInterop": true,
-        "target": "es2018",
+        "target": "es5",
         "noImplicitAny": true,
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "dist",
+        "outDir": "./dist",
         "baseUrl": ".",
         "paths": {
             "*": [
@@ -14,9 +14,15 @@
                 "src/types/*"
             ]
         },
-        "allowJs": true
+        "declaration": true
     },
     "include": [
         "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/tests/*",
+        "**/src/**/*.spec.ts",
+        "**/src/**/*.spec.js"
     ]
 }

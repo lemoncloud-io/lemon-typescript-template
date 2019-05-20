@@ -1,8 +1,9 @@
 {
     "name": "lemon-typescript-template",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "version": "1.0.4",
+    "description": "lemon npm module template",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "nodemon": "NODE_ENV=development nodemon dist/app.js",
         "start": "npm run build && concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run nodemon\"",
@@ -11,7 +12,13 @@
         "watch-ts": "tsc -w",
         "dev:test": "jest --config=jest.config.json --watchAll",
         "test": "jest --config=jest.config.json",
-        "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,jsx,tsx}' --fix"
+        "doc": "npm run doc:html && open dist/docs/index.html",
+        "doc:html": "typedoc src/libs --exclude **/*.spec.ts --target ES6 --mode file --out dist/docs",
+        "doc:publish": "npm run doc:html && gh-pages -m \"docs(gh-pages): publish gh-pages via typedoc\" -d dist/docs",
+        "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,jsx,tsx}' --fix",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint && npm run format"
     },
     "repository": {
         "type": "git",
@@ -28,6 +35,9 @@
             "git add"
         ]
     },
+    "files": [
+        "dist/**/*"
+    ],
     "engines": {
         "node": ">=8.10.0"
     },
@@ -57,15 +67,18 @@
         "@types/winston": "^2.4.4",
         "@typescript-eslint/eslint-plugin": "^1.7.0",
         "@typescript-eslint/parser": "^1.7.0",
+        "codecov": "^3.4.0",
         "concurrently": "^4.1.0",
         "eslint": "^5.16.0",
         "eslint-config-prettier": "^4.2.0",
         "eslint-plugin-prettier": "^3.0.1",
+        "gh-pages": "^2.0.1",
         "husky": "^2.2.0",
         "jest": "^24.8.0",
         "lint-staged": "^8.1.6",
         "nodemon": "^1.19.0",
         "prettier": "^1.17.0",
-        "ts-jest": "^24.0.2"
+        "ts-jest": "^24.0.2",
+        "typedoc": "^0.14.2"
     }
 }
